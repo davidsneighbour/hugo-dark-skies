@@ -1,0 +1,89 @@
+###############################################################################
+# Documented defaults for the Dark Skies Gohugo theme setup
+###############################################################################
+# TODO Read more about settings and configuration at:
+# TODO write a note about `dnb.theme.notation` notation.
+###############################################################################
+[dnb.theme]
+slug = "dark-skies"
+# sets the default theme
+# the following is ignored if `dnb.theme.switcher.enabled` is true. In that case
+# the value of `dnb.theme.switcher.default` is used.
+theme = "dark"
+show_title = true
+# 16:9, 4:3, 1:1 or whatever ratio you want for thumbnails and article image
+# procesing. This needs to be a string and needs to be two floats separated by
+# a colon (:).
+# TODO enhancement, currently this works as width:height, but it should be
+# longest side:shortest side.
+aspect_ratio = "2:1"
+# A collection of image sizes for responsive image sizes. this takes the
+# dnb.theme.aspect_ratio into account, so only the longest side length is
+# required here.
+# TODO bug, should be integer instead of string
+image_sizes = ["494", "517", "674", "914"]
+break_points = ["520", "540", "720", "960"]
+# The integrated contact form works perfectly with https://formspree.io or any
+# other email service that is processing your local form via POST requests.
+# TODO enhancement, document more services and add optional fields for these.
+contact_form_action = ""
+# TODO deprecated. use TBD
+logo = "/assets/logo/favicon.svg"
+logo_height = "40"
+logo_width = "40"
+
+################################################################################
+# footer setup
+################################################################################
+[dnb.theme.footer]
+show_version = true
+show_tag_as_version = false
+show_release_as_version = false
+# full link to the github repository
+# TODO make this more flexible, so other repositories can work too
+repository = ""
+
+# TODO check possibility to do that via parent/children menus with one single
+# footer menu entry. Might be overkill and will definitely not work if the
+# footer is to show another widget type.
+# TODO fix and itegrate
+# [[dnb.theme.footer.menus]]
+# slug = "configurations"
+# name = "Configurations"
+# [[dnb.theme.footer.menus]]
+# slug = "hugomodules"
+# name = "GoHugo Modules"
+# [[dnb.theme.footer.menus]]
+# slug = "projects"
+# name = "Projects"
+
+# TODO enhancement, add integration to theme build process
+[dnb.theme.colors]
+primary = "#d02d19"
+
+[dnb.theme.dateformat]
+long = "Mon, Jan 2, 2006"
+short = "Jan 2 2006"
+timestamp = "2006-01-02T15:04:05-07:00"
+
+[dnb.theme.switcher]
+# boolean
+enabled = true
+# `dark`, `light` or whatever `dnb.theme.switcher.themes` offers
+# This overrides `dnb.theme.theme`.
+default = "dark"
+# selected icon theme.
+# can be one of the identifiers of dnb-hugo-icons OR
+# `specific` to indicate use values of `icon` values as individual classes OR
+# `partial` to indicate the inclusion of the value as cached partial
+# TODO check if specific and partial works and document where this is used
+icontheme = "bootstrap"
+
+# Available color schemes (themes) for the switcher. The icons are of the same
+# `icontheme` as selected above.
+[[dnb.theme.switcher.themes]]
+slug = "light"
+icon = "sun-fill"
+[[dnb.theme.switcher.themes]]
+slug = "dark"
+icon = "moon-stars-fill"
