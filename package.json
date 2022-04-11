@@ -1,0 +1,22 @@
+{
+  "name": "@davidsneighbour/dark-skies-hugo",
+  "version": "0.0.0",
+  "license": "MIT",
+  "description": "An opinionated and colourful theme for static website generators (GoHugo version)",
+  "author": {
+    "name": "Patrick Kollitsch",
+    "email": "patrick@davids-neighbour.com",
+    "web": "https://davids-neighbour.com"
+  },
+  "repository": "davidsneighbour/hugo-dark-skies",
+  "devDependencies": {
+    "@dnb-org/standard-version-config": "^3.5.9",
+    "@dnb-org/tools": "^3.5.10"
+  },
+  "scripts": {
+    "release": "standard-version --release-as patch --sign -a -t \"v\" --releaseCommitMessageFormat \"chore(release): v{{currentTag}}\" && ./bin/release/postrelease",
+    "release:major": "standard-version --release-as major --sign -a -t \"v\" --releaseCommitMessageFormat \"chore(release): v{{currentTag}}\" && ./bin/release/postrelease",
+    "release:minor": "standard-version --release-as minor --sign -a -t \"v\" --releaseCommitMessageFormat \"chore(release): v{{currentTag}}\" && ./bin/release/postrelease"
+  },
+  "private": true
+}
