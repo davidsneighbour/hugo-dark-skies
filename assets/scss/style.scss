@@ -1,0 +1,167 @@
+// Font setup
+@import 'settings/fonts';
+
+// Bootstrap - Setup Configuration
+@import 'bootstrap/scss/functions';
+@import 'bootstrap/scss/variables';
+@import 'bootstrap/scss/mixins';
+@import 'bootstrap/scss/utilities';
+
+// Local Bootstrap Setup/Overrides
+@import 'settings/theme';
+
+// colors
+$primary: hsl(6deg, 63.4%, 46.1%);
+$theme-colors: (
+  'primary': $primary,
+  'secondary': $secondary,
+  'success': $success,
+  'info': $info,
+  'warning': $warning,
+  'danger': $danger,
+  'light': $light,
+  'dark': $dark,
+);
+
+:root {
+  --brand-hue: 6;
+  --brand-saturation: 63.4%;
+  --brand-lightness: 46.1%;
+  --primary: #{$primary};
+  --gray-300: #{$gray-300};
+  --highlight-color-bg: #{$primary};
+  --highlight-color-fg: #{$light};
+
+  // https://drafts.csswg.org/css-ui-4/#widget-accent
+  // https://caniuse.com/?search=accent-color
+  accent-color: var(--brand);
+}
+
+.light {
+  --bg-page: #{$gray-100};
+  --bg-card: #{$white};
+  --color-title: #{$black};
+  --color: #{$dark};
+  --color2: #{$white};
+  --link-color: #{$light};
+  --link-color-hover: #{$gray-300};
+  --footer-color-fg: #{$light};
+  --footer-color-bg: #{$dark};
+  --card-border-color: #{$dark};
+  --brand: hsl(var(--brand-hue) var(--brand-saturation) var(--brand-lightness));
+  --text1: hsl(var(--brand-hue) var(--brand-saturation) 10%);
+  --text2: hsl(var(--brand-hue) 30% 30%);
+  --surface1: hsl(var(--brand-hue) 25% 90%);
+  --surface2: hsl(var(--brand-hue) 20% 99%);
+  --surface3: hsl(var(--brand-hue) 20% 92%);
+  --surface4: hsl(var(--brand-hue) 20% 85%);
+}
+
+.dark {
+  --bg-page: #{$gray-800};
+  --bg-card: #{$gray-900};
+  --color-title: rgb(255 255 255 / 90%);
+  --color: rgb(255 255 255 / 70%);
+  --color2: #{$dark};
+  --link-color: #{$light};
+  --link-color-hover: #{$gray-300};
+  --footer-color-fg: #{$light};
+  --footer-color-bg: #{$dark};
+  --card-border-color: #{$light};
+  --brand: hsl(var(--brand-hue) var(--brand-saturation) var(--brand-lightness));
+  --text1: hsl(var(--brand-hue) 15% 85%);
+  --text2: hsl(var(--brand-hue) 5% 65%);
+  --surface1: hsl(var(--brand-hue) 10% 10%);
+  --surface2: hsl(var(--brand-hue) 10% 15%);
+  --surface3: hsl(var(--brand-hue) 5% 20%);
+  --surface4: hsl(var(--brand-hue) 5% 25%);
+}
+
+$primary: var(--primary);
+
+$card-bg: var(--bg-card);
+$card-color: var(--color);
+
+$pagination-bg: var(--color2);
+$pagination-color: var(--color);
+
+// navbar-brand
+$navbar-brand-font-size: 2rem;
+
+// Bootstrap - Layout and components
+@import 'bootstrap/scss/root';
+@import 'bootstrap/scss/reboot';
+@import 'bootstrap/scss/type';
+@import 'bootstrap/scss/images';
+@import 'bootstrap/scss/containers';
+@import 'bootstrap/scss/grid';
+@import 'bootstrap/scss/tables';
+@import 'bootstrap/scss/forms';
+@import 'bootstrap/scss/buttons';
+@import 'bootstrap/scss/transitions';
+// @import 'bootstrap/scss/dropdown';
+// @import 'bootstrap/scss/button-group';
+@import 'bootstrap/scss/nav';
+@import 'bootstrap/scss/navbar';
+@import 'bootstrap/scss/card';
+// @import 'bootstrap/scss/accordion';
+// @import 'bootstrap/scss/breadcrumb';
+@import 'bootstrap/scss/pagination';
+@import 'bootstrap/scss/badge';
+@import 'bootstrap/scss/alert';
+// @import 'bootstrap/scss/progress';
+// @import 'bootstrap/scss/list-group';
+// @import 'bootstrap/scss/close';
+// @import 'bootstrap/scss/toasts';
+// @import 'bootstrap/scss/modal';
+// @import 'bootstrap/scss/tooltip';
+// @import 'bootstrap/scss/popover';
+// @import 'bootstrap/scss/carousel';
+// @import 'bootstrap/scss/spinners';
+// @import 'bootstrap/scss/offcanvas';
+// @import 'bootstrap/scss/placeholders';
+
+// Bootstrap - Helpers
+@import 'bootstrap/scss/helpers';
+
+// Bootstrap - Utilities
+@import 'bootstrap/scss/utilities/api';
+
+// create utility classes
+@import 'settings/utilities';
+
+// theme
+@import 'utilities';
+@import 'layout';
+@import 'footer';
+
+// components
+@import 'components/alerts';
+@import 'components/header';
+@import 'components/navigation';
+@import 'components/cards';
+@import 'components/figure';
+@import 'components/pagination';
+@import 'components/widgets';
+
+// Prose formatting
+.prose {
+  @import 'prose/prose';
+}
+
+// plugins
+@import 'plugins/debugprint';
+@import 'plugins/youtube';
+
+// syntax highlighting
+.dark {
+  @import 'plugins/syntax/dark';
+}
+
+/* stylelint-disable-next-line no-duplicate-selectors */
+.light {
+  @import 'plugins/syntax/light';
+}
+
+// local overrides for child themes
+@import 'local';
