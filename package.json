@@ -1,6 +1,6 @@
 {
   "name": "@davidsneighbour/dark-skies-hugo",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "license": "MIT",
   "description": "An opinionated and colourful theme for static website generators (GoHugo version)",
   "author": {
