@@ -1,2 +1,4 @@
 github.com/davidsneighbour/hugo-hooks v1.2.3 h1:bbshYCpnNv3wDHC2eK/4HC2EZib9U0d4xb2KR3OdO+s=
 github.com/davidsneighbour/hugo-hooks v1.2.3/go.mod h1:agUeSwS32vDxIHULp8fP/vnP6wOP9E2DdW44UZkdCUs=
+github.com/davidsneighbour/hugo-styles v0.0.0-20220413170339-246a1fe1be76 h1:9otYZcejF8S84UqKeA7NVF5ZyGbrP9AwpCCDANnPxDQ=
+github.com/davidsneighbour/hugo-styles v0.0.0-20220413170339-246a1fe1be76/go.mod h1:zw3aoVbNQ0duy/Fd/4cs1G/C0NHX5xLArrb79n8FqqM=
